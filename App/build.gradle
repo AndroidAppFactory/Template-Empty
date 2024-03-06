@@ -98,9 +98,9 @@ android {
 }
 
 dependencies {
-    api "com.bihe0832.android:common-debug:6.9.0"
+    api "com.bihe0832.android:common-debug:6.9.4"
     kapt "com.bihe0832.android:lib-router-compiler:5.1.7"
-    api "com.bihe0832.android:common-wrapper-min:6.9.0"
+    api "com.bihe0832.android:common-wrapper-min:6.9.4"
     api fileTree(include: ['*.aar'], dir: './../libs')
     api fileTree(include: ['*.jar'], dir: './../libs')
 
