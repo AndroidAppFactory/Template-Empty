@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 // 不同类型的包，仅仅修改下面两项即可，其余内容保持一致
 project.ext.applicationID = "com.bihe0832.android.template.empty"
@@ -42,6 +41,14 @@ android {
 
     lintOptions {
         abortOnError false
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion project.compose_version
     }
 
     signingConfigs {
@@ -95,13 +102,18 @@ android {
             }
         }
     }
+
+    configurations.all {
+        resolutionStrategy {
+            force("androidx.lifecycle:lifecycle-livedata-core:2.6.0")
+        }
+    }
 }
 
 dependencies {
-    api "com.bihe0832.android:common-debug:6.21.12"
+    api "com.bihe0832.android:common-compose-debug:7.1.1"
     kapt "com.bihe0832.android:lib-router-compiler:5.1.7"
-    api "com.bihe0832.android:common-wrapper-min:6.21.9"
+    api "com.bihe0832.android:common-wrapper-min:7.1.1"
     api fileTree(include: ['*.aar'], dir: './../libs')
     api fileTree(include: ['*.jar'], dir: './../libs')
-
 }

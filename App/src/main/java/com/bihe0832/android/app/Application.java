@@ -1,6 +1,7 @@
 package com.bihe0832.android.app;
 
-import com.bihe0832.android.framework.ui.BaseApplication;
+
+import com.bihe0832.android.framework.BaseApplication;
 
 public class Application extends BaseApplication {
 

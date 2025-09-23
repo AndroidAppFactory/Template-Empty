@@ -15,10 +15,10 @@
             android:supportsRtl="true">
 
         <activity
-                android:name=".MainActivity"
-                android:configChanges="orientation|screenSize|keyboardHidden"
-                android:screenOrientation="portrait"
-                android:theme="@style/AAF.ActivityTheme">
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/android:Theme.Material.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
