@@ -115,7 +115,7 @@ kapt {
 }
 
 dependencies {
-    api "com.bihe0832.android:common-compose-debug:8.0.0"
+    api "com.bihe0832.android:common-compose-debug:8.0.6"
     kapt "com.bihe0832.android:lib-router-compiler:5.1.7"
-    api "com.bihe0832.android:common-wrapper-min:8.0.0"
+    api "com.bihe0832.android:common-wrapper-min:8.0.6"
 }
