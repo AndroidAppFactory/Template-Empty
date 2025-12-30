@@ -8,6 +8,7 @@ project.ext.routerSchema = "ztempty"
 project.ext.applicationName = "ZTEmptyDemo"
 
 android {
+    namespace project.ext.applicationID
     compileSdkVersion project.compileSdkVersion
     buildToolsVersion project.buildToolsVersion
 
@@ -37,6 +38,15 @@ android {
         project.excludeList.each { item ->
             exclude item
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
     }
 
     lintOptions {
@@ -115,7 +125,7 @@ kapt {
 }
 
 dependencies {
-    api "com.bihe0832.android:common-compose-debug:8.0.6"
+    api "com.bihe0832.android:common-compose-debug:8.1.2"
     kapt "com.bihe0832.android:lib-router-compiler:5.1.7"
-    api "com.bihe0832.android:common-wrapper-min:8.0.6"
+    api "com.bihe0832.android:common-wrapper-min:8.1.2"
 }
