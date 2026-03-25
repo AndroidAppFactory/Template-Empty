@@ -17,6 +17,10 @@ import com.bihe0832.android.lib.file.FileUtils
 import com.bihe0832.android.lib.router.annotation.APPMain
 import com.bihe0832.android.lib.utils.intent.IntentUtils
 
+/**
+ * 重要提示！！！
+ * 默认使用的是Android的 Default Debug Keystore，在安装时会提示有安全风险，使用自己的 Release Keystore 即可消除！！！
+ */
 @APPMain
 class MainActivity : CommonComposeActivity() {
 
